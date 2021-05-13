@@ -1,14 +1,14 @@
 <!doctype html>
 <title>Save and restore</title>
 
-<script src="../build/libv86.js"></script>
+<script src="libv86.js"></script>
 <script>
 "use strict";
 
 window.onload = function()
 {
     var emulator = new V86Starter({
-        wasm_path: "../build/v86.wasm",
+        wasm_path: "v86.wasm",
         memory_size: 32 * 1024 * 1024,
         vga_memory_size: 2 * 1024 * 1024,
         screen_container: document.getElementById("screen_container"),
@@ -19,7 +19,7 @@ window.onload = function()
             url: "../bios/vgabios.bin",
         },
         cdrom: {
-            url: "../images/linux.iso",
+            url: "http://www.mirrorservice.org/sites/clearfoundation.com/7/iso/x86_64/ClearOS-DVD-x86_64.iso",
         },
         autostart: true,
     });
